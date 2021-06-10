@@ -1,0 +1,26 @@
+security:
+    encoders: 
+        App\Entity\User: bcrypt
+    providers:
+        user_db:
+            entity: { class: App\Entity\User, property: username }
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            provider: user_db
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
+                csrf_parameter: _csrf_security_token
+                csrf_token_id: a_private_string
+                always_use_default_target_path: false
+                default_target_path: home
+            logout:
+                path: logout
+                target: login
+    access_control:
+        - { path: security/admin.html.twig, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }

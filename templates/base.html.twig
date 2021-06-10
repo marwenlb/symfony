@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>RIO-COMMERCE </title>
+	<link rel="stylesheet" href="{{asset('../css/bootstrap.css')}}" />
+	<link rel="stylesheet" href="{{asset('../css/bootstrap-responsive.css')}}" />
+	<link rel="stylesheet" href="{{asset('../css/style.css')}}" />
+	<link rel="stylesheet" href="{{asset('../css/font-awesome.css')}}" />
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="index.php">RIO-COMMERCE</a>
+            <div class="nav-collapse collapse">
+                <form class="navbar-form form-search pull-right">
+                
+             <a href="{{ path('contact')}}"class="btn btn-primary">Contact US</a>
+             <a href="{{ path('login')}}"class="btn btn-primary">Login</a>
+              <a href="{{ path('user_registration')}}"class="btn btn-primary">Sign up</a>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% block body %}
+<body>
+</body>
+{% endblock %}
+
+
+    <hr />
+
+    <footer id="footer" class="vspace20">
+        <div class="container">
+            <div class="row">
+              
+
+                <div class="span4">
+                    <h4>Notre entrepot</h4>
+                    <p><i class="icon-map-marker"></i>&nbsp;Djerba 4133 - 3 rue des jardins</p>
+                </div>
+
+                <div class="span2">
+                    <h4>Nous contacter</h4>
+                    <p><i class="icon-phone"></i>&nbsp;Tel: 29 315 707</p>
+                    <p><i class="icon-print"></i>&nbsp;Fax: 29 315 707</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <p>&copy; Copyright 2021 - Labassi Marouene</p>
+                </div>
+            </div>
+        </div>
+    </footer>   
+    <script src="{{asset('../js/jquery-1.10.0.min.js')}}"></script>
+    <script src="{{asset('../js/bootstrap.js')}}"></script>
+</body>
+</html>
